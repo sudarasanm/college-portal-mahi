@@ -390,9 +390,10 @@ import { excelToJson, jsonToExcel } from "../utilities/excel-parser.js"
 export const getFaculty = async (req,res) =>{
     try{
         const test = await CourseDetailsModel.find({ facultyId: "63f42892a8a5c50a79ed265f" }, { branch: 1, _id: 0, courseCode: 1, branch: 1, semester: 1 })
-
+        
         res.status(200).json({
             success: true,
+            length: test.length,
             test
         })
 

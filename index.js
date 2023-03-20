@@ -12,7 +12,7 @@ import admin from "./routes/admin.js"
 import fa from "./routes/fa.js"
 // import student from "./routes/student.js"
 import ci from "./routes/ci.js"
-import auth from "./routes/auth.js"
+// import auth from "./routes/auth.js"
 
 dotenv.config()
 const app = express()

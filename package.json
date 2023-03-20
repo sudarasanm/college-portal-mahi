@@ -4,8 +4,7 @@
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "npx nodemon",
-    "pkg": "pkg --target=latest-linux-x64 -o app.out index.js"
+    "dev": "npx nodemon"
   },
   "dependencies": {
     "cors": "^2.8.5",
@@ -17,8 +16,5 @@
     "nodemon": "^2.0.20",
     "redis": "^4.6.4",
     "xlsx": "^0.18.5"
-  },
-  "devDependencies": {
-    "pkg": "^5.8.1"
   }
 }
