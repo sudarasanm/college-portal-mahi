@@ -238,12 +238,31 @@ import { COAttainment } from "../models/CofileModel.js"
 // /////////////////////// COURSE ATTAINMENT MODULE ///////////////////////
 export const getDetials = async (req,res) =>{
     try{
-        const test = await CourseDetailsModel.find({}, { branch: 1, _id: 0, courseCode: 1, semester: 1,firstName:1})
-        const test1 = await FacultyModel.find({},{_id:0,firstName:1})
-        const final = [...test,...test1]
+        const final = await CourseDetailsModel.aggregate([
+            {$match:{}},
+            {
+            $lookup:{
+            from:"Faculty",
+            localField:"facultyId",
+            foreignField:"_id",
+            as:"facultyDetails"
+            }
+            },
+            {$unwind:"$facultyDetails"},
+            {
+            $project:{ branch: 1, 
+                _id: 0,
+                courseCode: 1,
+                semester: 1,
+                firstname :"$facultyDetails.firstName"
+            }
+            }]
+            )
+        const length = final.length
         res.status(200).json({
             success: true,
-            final
+            final,
+            length
         })
 
     }catch(err) { res.status(400).send("Request Failed: " + err.message) }
