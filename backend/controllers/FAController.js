@@ -236,13 +236,12 @@ import { COAttainment } from "../models/CofileModel.js"
 
 
 // /////////////////////// COURSE ATTAINMENT MODULE ///////////////////////
-export const getDetials = async (req,res) =>{
+export const getDetials =async(req,res) =>{
     try{
         const final = await CourseDetailsModel.aggregate([
             {$match:{}},
             {
-            $lookup:{
-            from:"Faculty",
+            $lookup:{from:"Faculty",
             localField:"facultyId",
             foreignField:"_id",
             as:"facultyDetails"
@@ -270,7 +269,7 @@ export const getDetials = async (req,res) =>{
 
 export const getuploadedData = async (req,res)=>{
     try{
-        const test = await COAttainment.find({},{_id:0})
+        const test = await COAttainment.find({},{_id:0,__v:0})
         res.status(200).json({
             success:true,
             test

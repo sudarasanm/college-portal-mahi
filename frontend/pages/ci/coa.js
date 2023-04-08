@@ -4,7 +4,7 @@ import Upload from "../../utilities/Upload"
 const CourseOutcome = ({data,index,lenght}) => {
     data.map((data)=>{
         for (index=0; index<lenght; index++) {
-        data[index]=<Upload/>
+        data[index]=<Upload url={'http://localhost:5002/ci/uploadDetials'}/>
         return data;
         }
     })

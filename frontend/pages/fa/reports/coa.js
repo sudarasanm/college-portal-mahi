@@ -5,13 +5,14 @@ import Table from "../../../utilities/Table";
 const COA = ({data,index,lenght}) => {
     data.map((data)=>{
         for (index=0; index<lenght; index++) {
-        data[index]=<Button/>
+        data[index]=<Button name='view' outline='4'/>
         return data;
         }
     })
     return(
         <>
     <Table data={data} />
+   
     
     </>
  );
