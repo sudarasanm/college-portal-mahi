@@ -15,11 +15,6 @@
   ],
   "rootMainFiles": [],
   "pages": {
-    "/": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/index.js"
-    ],
     "/_app": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
@@ -30,65 +25,65 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/ci": [
+    "/admin": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ci.js"
+      "static/chunks/pages/admin.js"
     ],
-    "/ci/coa": [
+    "/admin/reports": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ci/coa.js"
+      "static/chunks/pages/admin/reports.js"
     ],
-    "/ci/internals": [
+    "/admin/reports/coa": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ci/internals.js"
+      "static/chunks/pages/admin/reports/coa.js"
     ],
-    "/ci/internals/theory": [
+    "/admin/reports/internals": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ci/internals/theory.js"
+      "static/chunks/pages/admin/reports/internals.js"
     ],
-    "/ci/requests": [
+    "/admin/requests": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ci/requests.js"
+      "static/chunks/pages/admin/requests.js"
     ],
-    "/ci/timetable": [
+    "/fa/reports": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/ci/timetable.js"
+      "static/chunks/pages/fa/reports.js"
     ],
-    "/fa/attendance/condonation": [
+    "/fa/reports/coa": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/fa/attendance/condonation.js"
+      "static/chunks/pages/fa/reports/coa.js"
     ],
-    "/fa/attendance/onduty": [
+    "/fa/reports/internals": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/fa/attendance/onduty.js"
+      "static/chunks/pages/fa/reports/internals.js"
     ],
-    "/fa/attendance/report": [
+    "/hod/reports/coa": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/fa/attendance/report.js"
+      "static/chunks/pages/hod/reports/coa.js"
     ],
-    "/fa/examination": [
+    "/hod/requests": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/fa/examination.js"
+      "static/chunks/pages/hod/requests.js"
     ],
-    "/fa/examination/hallticket": [
+    "/pc/enrollment": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/fa/examination/hallticket.js"
+      "static/chunks/pages/pc/enrollment.js"
     ],
-    "/fa/feedback": [
+    "/ttc/ut": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/fa/feedback.js"
+      "static/chunks/pages/ttc/ut.js"
     ]
   },
   "ampFirstPages": []

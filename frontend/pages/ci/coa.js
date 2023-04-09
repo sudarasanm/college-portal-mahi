@@ -1,16 +1,41 @@
 import Table from "../../utilities/Table"
 import Upload from "../../utilities/Upload"
+import Button from "../../utilities/Button"
+import { useState } from 'react';
 
 const CourseOutcome = ({data,index,lenght}) => {
-    data.map((data)=>{
-        for (index=0; index<lenght; index++) {
-        data[index]=<Upload url={'http://localhost:5002/ci/uploadDetials'}/>
-        return data;
+
+
+
+
+    const [datas, setData] = useState("");
+
+    const handleClick = async () => {
+        try {
+          const response = await fetch('http://localhost:5002/fa/getuplodedData');
+          const dataset = await response.json()
+          const datas = dataset.test
+          setData(datas);
+
+        } catch (error) {
+          console.error('Error fetching data:', error);
         }
-    })
-    return(
+      };
+const modifiedData = data?.map((item) =>{
+    return{
+        ...item,
+        Upload: <Upload url={'http://localhost:5002/ci/uploadDetials'}/>,
+        View : <Button name='view' outline='0' event={handleClick} />
+    }
+
+})
+    
+    return( 
         <>
-    <Table data={data} />
+    <Table data={modifiedData}/>
+    <Table data = {datas}/>
+
+
     
     </>
  );

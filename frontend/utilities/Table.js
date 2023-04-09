@@ -16,9 +16,9 @@ const Table = ({ data, editable, update, omit = ['_id'], indexed }) => {
     
     const omitFields = (field) => !omit.some((item) => item == field);
 
-    const fields = data && data.length > 0 ? Object.keys(data[0]).filter((key) => omitFields(key)) : [];
+    const fields = data && data.length > 0 ? Object?.keys(data[0])?.filter((key) => omitFields(key)) : [];
 
-    const [edit, setEdit] = useState(data.map((item) => 0));
+    const [edit, setEdit] = useState(0);
     const [values, setValues] = useState({});
 
     const mutate = (index, state, reset = true) => {
